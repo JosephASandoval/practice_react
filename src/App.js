@@ -11,14 +11,11 @@ import TodoItem from "./components/TodoItem";
 import todosData from "./data/todosData";
 
 function App() {
-  return (
-    <div className="todo-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-    </div>
-  );
+  let todoComponents = todosData.map(item => {
+    return <TodoItem key={item.id} item={item} />;
+  });
+
+  return <div className="todo-list">{todoComponents}</div>;
 }
 
 export default App;
