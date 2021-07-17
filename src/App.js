@@ -33,8 +33,6 @@ class App extends Component {
         todos: updatedTodos,
       };
     });
-
-    // console.log("changed!", id)
   }
 
   render() {
