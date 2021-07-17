@@ -6,16 +6,25 @@ I've created a js file with some todos data in it, which I'm imported into this 
 Challenge: Using the array map method, render a child component for each todo item in the todosData array and pass the relevant data to it.
 */
 
-import React from "react";
+import React, { Component } from "react";
 import TodoItem from "./components/TodoItem";
 import todosData from "./data/todosData";
 
-function App() {
-  let todoComponents = todosData.map(item => {
-    return <TodoItem key={item.id} item={item} />;
-  });
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: todosData 
+    };
+  }
 
-  return <div className="todo-list">{todoComponents}</div>;
+  render() {
+    let todoComponents = this.state.todos.map((item) => {
+      return <TodoItem key={item.id} item={item} />;
+    });
+
+    return <div className="todo-list">{todoComponents}</div>;
+  }
 }
 
 export default App;

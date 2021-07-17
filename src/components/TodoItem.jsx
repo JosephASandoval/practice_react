@@ -5,7 +5,11 @@ function TodoItem(props) {
 
   return (
     <div className="todo-item">
-      <input type="checkbox" checked={completed} />
+      <input
+        type="checkbox"
+        checked={completed}
+        onChange={() => console.log("clicked")}
+      />
       <p>{text}</p>
     </div>
   );
