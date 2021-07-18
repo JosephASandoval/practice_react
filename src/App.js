@@ -34,7 +34,7 @@ class App extends Component {
       );
     });
 
-    return <div>{todosComponents}</div>;
+    return <div className="todo-list">{todosComponents}</div>;
   }
 }
 
