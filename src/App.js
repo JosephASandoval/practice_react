@@ -28,13 +28,13 @@ class App extends Component {
   }
 
   render() {
-    let todosComponents = this.state.todos.map((todo) => {
+    let todosComponent = this.state.todos.map((todo) => {
       return (
         <TodoItem key={todo.id} todo={todo} handleChange={this.handleChange} />
       );
     });
 
-    return <div className="todo-list">{todosComponents}</div>;
+    return <div className="todo-list">{todosComponent}</div>;
   }
 }
 
