@@ -40,3 +40,9 @@ input[type="checkbox"] {
 input[type="checkbox"]:focus {
   outline: 0;
 }
+
+.todo-text {
+  text-decoration: line-through;
+  color: lightgray;
+  font-style: italic;
+}

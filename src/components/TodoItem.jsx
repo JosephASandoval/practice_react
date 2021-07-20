@@ -8,7 +8,7 @@ function TodoItem({ todo, handleChange }) {
         checked={todo.completed}
         onChange={() => handleChange(todo.id)}
       />
-      <p>{todo.text}</p>
+      <p className={todo.completed ? "todo-text" : null}>{todo.text}</p>
     </div>
   );
 }
