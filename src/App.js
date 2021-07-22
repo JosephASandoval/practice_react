@@ -14,15 +14,17 @@ class App extends Component {
 
   handleChange(id) {
     this.setState((prevState) => {
-      let updatedState = prevState.todos.map((todo) => {
+      const updatedTodos = prevState.todos.map((todo) => {
         if (todo.id === id) {
-          todo.completed = !todo.completed;
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
         }
         return todo;
       });
-
       return {
-        todos: updatedState,
+        todos: updatedTodos,
       };
     });
   }
